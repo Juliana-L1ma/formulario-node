@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro</title>
+</head>
+<body>
+
+    <header>
+        <!-- <img src="..." class="logo"> -->
+        <p>Governo do estado de Nova York</p><br>
+        <p>Secretaria de Estado de Segurança</p><br>
+        <p>Chefia da Polícia Civil</p><br>
+    </header>
+
+    <hr>
+
+    <main>
+
+            <form class="form-registroDaOcorrencia" onsubmit="event.preventDefault()">
+
+                
+                <div class="registroGereal">
+                    <h2>Registro da ocorrência</h2><br>
+                <label>Registro da ocorrência:</label>
+                <input type="text" id="id" placeholder="Não precisa preencher" readonly><br><br>
+
+                <label>Data do registro:</label>
+                <input type="date" id="dataDoRegistro"><br><br>
+
+                <label>Hora do registro:</label>
+                <input type="time" id="horaDoRegistro"><br><br>
+
+                <label>Responsável p/ investigação:</label>
+                <input type="text" id="responsavelInvestigacao"><br><br>
+
+                <label>Distrito:</label>
+                <input type="text" id="faixa" list="faixa">
+            </div>
+<hr>
+            <div class="ocorrenciaDados">
+                <h2>Ocorrência</h2>
+
+
+                <label>Artigo</label>
+                <input type="text" id="artigo"><br><br>
+
+                <label>Local da ocorrência:</label>
+                <input type="text" id="localDaOcorrencia" placeholder="rua"><br><br>
+               
+
+                <label>Data da ocorrência:</label>
+                <input type="date" id="dataDaOcorrencia"><br><br>
+
+                <label>Hora da ocorrência:</label>
+                <input type="time" id="horaDaOcorrencia"><br><br>
+
+                <label>Flagrante:</label><br>
+                <input type="text" id="flagrante" name="flagrante">
+               
+            </div>
+            <hr>
+
+            <div class="despacho">
+                <h2>Despacho da autoridade</h2>
+                <p>Instauro INQUÉRITO POLICIAL<br>PORTARIA em separado</p>
+            </div>
+            <hr>
+
+            <div class="envolvidos">
+                <h2>Vítima</h2><br>
+                <label>Nome da vítima:</label>
+                <input type="text" id="nomeVitima"><br><br>
+                <label>CPF/RG:</label>
+                <input type="text" id="cpfrgVitima"><br><br>
+               
+                <h2>Testemunha</h2><br>
+                <label>Nome da Testemunha:</label>
+                <input type="text" id="nomeTestemunha"><br><br>
+                <label>CPF/RG:</label>
+                <input type="text" id="cpfrgTestemunha"><br><br>
+              
+
+                <h2>Autor</h2><br>
+                <label>Nome do autor:</label>
+                <input type="text" id="nomeAutor"><br><br>
+                <label>CPF/RG:</label>
+                <input type="text" id="cpfrgAutor"><br><br>
+            </div>
+            <hr>
+
+            <div class="relatoOBS">
+                <label>Relato da Ocorrência e Observações:</label><br>
+                <input type="text" id="inputFormSobre"/>
+            </div>
+
+            <input type="button" class="enviarCadastro" onclick="enviarRegistro(),printar()" value="enviar">
+        </form>
+
+       
+        <div class="imprime">
+            <div id="registroPrint"></div>
+            <div id="dataRegistroPrint"></div>
+            <div id="horaRegistroPrint"></div>
+            <div id="responsavelPrint"></div>
+            <div id="distritoPrint"></div>
+
+            <div id="artigoPrint"></div>
+            <div id="localDaOcorrenciaPrint"></div>
+            <div id="dataDaOcorrenciaPrint"></div>
+            <div id="horaDaOcorrenciaPrint"></div>
+            <div id="flagrantePrint"></div>
+
+            <div id="despacho"></div>
+            
+            <div id="nomeVitimaPrint"></div>
+            <div id="cpfrgVitimaPrint"></div>
+
+            <div id="nomeTestemunhaPrint"></div>
+            <div id="cpfrgTestemunhaPrint"></div>
+
+            <div id="nomeAutorPrint"></div>
+            <div id="cpfrgAutorPrint"></div>
+
+            <div id="inputFormSobrePrint"></div>
+        </div>
+
+    </main>
+   
+    
+    
+
+</body>
+<script src="post.js"></script>
+<script>
+    //Função caso o usuário queira printar o registro
+function printar(){
+
+var formsRegistro = new Object();
+
+formsRegistro.id = document.getElementById("id").value;
+formsRegistro.dataDoRegistro = document.getElementById("dataDoRegistro").value;
+formsRegistro.horaDoRegistro = document.getElementById("horaDoRegistro").value;
+formsRegistro.responsavelInvestigacao = document.getElementById("responsavelInvestigacao").value;
+formsRegistro.faixa = document.getElementById("faixa").value;
+
+formsRegistro.artigo = document.getElementById("artigo").value;
+formsRegistro.dataDaOcorrencia = document.getElementById("dataDaOcorrencia").value;
+formsRegistro.localDaOcorrencia = document.getElementById("localDaOcorrencia").value;
+formsRegistro.horaDaOcorrencia = document.getElementById("horaDaOcorrencia").value;
+formsRegistro.flagrante = document.getElementById("flagrante").value;
+
+formsRegistro.nomeVitima = document.getElementById("nomeVitima").value;
+formsRegistro.cpfrgVitima = document.getElementById("cpfrgVitima").value;
+formsRegistro.nomeTestemunha = document.getElementById("nomeTestemunha").value;
+formsRegistro.cpfrgTestemunha = document.getElementById("cpfrgTestemunha").value;
+formsRegistro.nomeAutor = document.getElementById("nomeAutor").value;
+formsRegistro.cpfrgAutor = document.getElementById("cpfrgAutor").value;
+
+formsRegistro.inputFormSobre = document.getElementsById("inputFormSobre").value;
+
+var jsonForm = JSON.stringify(formsRegistro);
+
+console.log(formsRegistro.valueOf());
+
+
+
+document.getElementById("registroPrint").innerHTML = "<h2>Registro da ocorrência </h2>" + formsRegistro.id;
+document.getElementById("dataRegistroPrint").innerHTML = '<label>Data do registro: </label>' + formsRegistro.dataDoRegistro;
+document.getElementById("horaRegistroPrint").innerHTML = '<label>Hora do registro: </label> '+ formsRegistro.horaDoRegistro;
+document.getElementById("responsavelPrint").innerHTML = ' <label>Responsável p/ investigação:</label> ' + formsRegistro.responsavelInvestigacao;
+document.getElementById("distritoPrint").innerHTML = '<label>Distrito:</label> ' + formsRegistro.faixa + "<br> <hr>";
+
+document.getElementById("artigoPrint").innerHTML = '<label>Artigo: </label> ' + formsRegistro.artigo;
+document.getElementById("dataDaOcorrenciaPrint").innerHTML = '<label>Data da ocorrência:</label> ' + formsRegistro.dataDaOcorrencia;
+document.getElementById("localDaOcorrenciaPrint").innerHTML =  '<label>Local da ocorrência:</label> ' + formsRegistro.localDaOcorrencia ;
+document.getElementById("horaDaOcorrenciaPrint").innerHTML = '<label>Hora da ocorrência:</label> ' + formsRegistro.horaDaOcorrencia;
+document.getElementById("flagrantePrint").innerHTML =  '<label>Flagrante:</label> ' + formsRegistro.flagrante + "<br> <hr>";
+
+document.getElementById("despacho").innerHTML = "<h2>Despacho da autoridade</h2> <p>Instauro INQUÉRITO POLICIAL<br>PORTARIA em separado</p>" + "<br> <hr>";
+
+document.getElementById("nomeVitimaPrint").innerHTML = '<h2>Vítima</h2><br> <label>Nome da vítima:</label> ' + formsRegistro.nomeVitima;
+document.getElementById("cpfrgVitimaPrint").innerHTML =  '<label>CPF/RG: </label> ' + formsRegistro.cpfrgVitima;
+document.getElementById("nomeTestemunhaPrint").innerHTML = '<h2>Testemunha</h2><br> <label>Nome da Testemunha:</label> ' + formsRegistro.nomeTestemunha;
+document.getElementById("cpfrgTestemunhaPrint").innerHTML = '<label>CPF/RG:</label> ' + formsRegistro.cpfrgTestemunha;
+document.getElementById("nomeAutorPrint").innerHTML =  ' <h2>Autor</h2><br><label>Nome do autor:</label>: ' + formsRegistro.nomeAutor;
+document.getElementById("cpfrgAutorPrint").innerHTML = '<label>CPF/RG:</label> ' + formsRegistro.cpfrgAutor + "<br> <hr>";
+
+document.getElementById("inputFormSobrePrint").innerHTML = '<label>Relato da Ocorrência e obs:</label><br> ' + formsRegistro.inputFormSobre;
+window.print();
+}
+</script>
+</html>

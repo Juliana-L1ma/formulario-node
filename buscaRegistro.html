@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Buscar e Atualizar Registro</title>
+</head>
+<body>
+    
+
+    <form class="form-cadastro" onsubmit="event.preventDefault()">
+
+
+        <p class="title"><h3>Buscar e Atualizar Registro</h3></p>
+        <div class="flex">
+            <label>
+                <span>Nome</span>
+                <input placeholder=""  type="text" id="nomePolicial" class="input-register" required>
+
+            </label>
+            <br>
+            <label>
+                <span>Sobrenome</span>
+                <input placeholder=""  type="text" id="sobrenomePolicial"  class="input-register" required>
+
+            </label>
+        </div>
+        <br>
+        <label>
+            <span>Email</span>
+            <input placeholder="" id="emailPolicial" type="email" class="input-register">
+
+        </label>
+        <br>
+        <label>
+            <input placeholder="" id="cpfAtualizar" type="text" class="input-register">
+            <span>CPF</span>
+        </label>
+        <br>
+        <label>
+            <input placeholder="" id="senhaPolicial" type="text" class="input-register">
+            <span>Senha</span>
+        </label>
+        <br>
+        <label>
+            <span>NP</span>
+            <input placeholder=""  type="text" id="id"  class="input-register" required>
+
+        </label>
+<br>
+        <label>
+            <span>Distrito</span>
+            <input placeholder=""  type="text" id="distritoPolicial"  class="input-register" required>
+
+        </label>
+        <br>
+
+        <input type="button" class="enviarCadastro" onclick="buscarDados()" value="buscar">
+        <input type="button" class="enviarCadastro" onclick="atualizaDados()" value="atualizar">
+        
+
+    </form>
+</body>
+<script src="crud.js"></script>
+</html>

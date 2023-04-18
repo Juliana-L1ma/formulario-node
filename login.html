@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>login</title>
+</head>
+<body>
+
+    
+    <form class="form-cadastro" onsubmit="event.preventDefault(); fazerLogin()">
+        <p class="title">Login</p>
+
+        <label>
+            <input placeholder=""  type="email" id="emailPolicial" class="input-register">
+            <span>Email: </span>
+        </label>
+
+        <label>
+            <input placeholder=""  type="password" id="senhaPolicial"  class="input-register" required>
+            <span>Senha:</span>
+        </label>
+
+        <input type="submit" class="enviarCadastro" value="Entrar">
+    </form>
+
+   
+</body>
+<script src="crud.js"></script>
+</html>

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+
+header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+ padding: 4%;
+ font-size: 1em;
+ font-weight: bold;
+}
+
+.registroGereal, 
+.ocorrenciaDados, 
+.despacho,
+.envolvidos,
+.relatoOBS{
+    margin-left: 5%;
+    padding: 2%;
+}
+.botao-registro{
+    margin-left: 15%;
+}
+
+/*----------------------- PÁGINA DE CADASTRO (INDEX) ----------------------------------*/
+.form-cadastro {
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: -1px 0px 25px 0px #53410d69;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(233, 203, 32);
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.863);
+    -webkit-text-stroke-width: 0.1px;
+-webkit-text-stroke-color: #000;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: rgb(233, 203, 32);
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: rgb(233, 203, 32);
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: rgb(233, 203, 32);
+  }
+  
+  .signin a:hover {
+    text-decoration: underline rgb(233, 203, 32);
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form-cadastro label {
+    position: relative;
+  }
+  
+  .form-cadastro label .input-register {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form-cadastro label .input-register + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form-cadastro label .input-register:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form-cadastro label .input-register:focus + span,.form-cadastro label .input-register:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form-cadastro label .input-register:valid + span {
+    color: rgb(185, 153, 9);
+  }
+  
+  .enviarCadastro {
+    border: none;
+    outline: none;
+    background-color: rgb(233, 203, 32);
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .enviarCadastro:hover {
+    background-color: rgb(192, 176, 85);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  @media print {
+    .form-registroDaOcorrencia{
+        display: none;
+    }
+}
+
+.imprime{
+    text-align: left;
+    color: rgb(0, 0, 0);
+    width: 80%;
+    margin-left: 5%;
+    padding: 2%;
+}

@@ -1,0 +1,121 @@
+{
+  "policiais": [
+    {
+      "nomePolicial": "Charles",
+      "sobrenomePolicial": "Boyle ",
+      "emailPolicial": "boylecharles@gmail.com",
+      "distritoPolicial": "95º",
+      "cpfAtualizar": "111.555.444.66",
+      "id": 3
+    },
+    {
+      "nomePolicial": "Amy ",
+      "sobrenomePolicial": "Santiago",
+      "emailPolicial": "santiagoamy@hotmail.com",
+      "distritoPolicial": "99º",
+      "cpfAtualizar": "222.222.222.22",
+      "id": 4
+    },
+    {
+      "id": 6,
+      "nomePolicial": "Juliana",
+      "sobrenomePolicial": "Lima",
+      "emailPolicial": "limaaajuliana@gmail.com",
+      "distritoPolicial": "99",
+      "cpfAtualizar": "455",
+      "senhaPolicial": "321"
+    }
+  ],
+  "registros": [
+    {
+      "id": 2,
+      "dataDoRegistro": "2023-04-17",
+      "horaDoRegistro": "16:00",
+      "responsavelInvestigacao": "Jacob Peralta",
+      "faixa": "99º",
+      "artigo": "157",
+      "local": "Brooklyn - SP",
+      "data": "2023-04-17",
+      "hora": "14:00",
+      "flagrante": "N",
+      "nomeVitima": "Fulana de tal",
+      "cpfrgVitima": "11111111111",
+      "nomeTestemunha": "NT",
+      "cpfrgTestemunha": "NT",
+      "nomeAutor": "NT",
+      "cpfrgAutor": "Em aberto"
+    },
+    {
+      "dataDoRegistro": "2023-04-20",
+      "horaDoRegistro": "12:00",
+      "responsavelInvestigacao": "Charles Boyle",
+      "faixa": "99º",
+      "artigo": "157",
+      "local": "Brooklyn - SP",
+      "data": "2023-04-20",
+      "hora": "10:00",
+      "flagrante": "N",
+      "nomeVitima": "Fulana de tal",
+      "cpfrgVitima": "11111111111",
+      "nomeTestemunha": "Em aberto",
+      "cpfrgTestemunha": "NT",
+      "nomeAutor": "Em aberto",
+      "cpfrgAutor": "Em aberto",
+      "id": 6
+    },
+    {
+      "dataDoRegistro": "2022-03-10",
+      "horaDoRegistro": "19:00",
+      "responsavelInvestigacao": "Jacob Peralta",
+      "faixa": "99º",
+      "artigo": "162",
+      "local": "Brooklyn - SP",
+      "data": "2022-03-10",
+      "hora": "18:45",
+      "flagrante": "S",
+      "nomeVitima": "NT",
+      "cpfrgVitima": "Nt",
+      "nomeTestemunha": "Em aberto",
+      "cpfrgTestemunha": "Em aberto",
+      "nomeAutor": "Em aberto",
+      "cpfrgAutor": "22222",
+      "id": 7
+    },
+    {
+      "dataDoRegistro": "2023-02-05",
+      "horaDoRegistro": "12:00",
+      "responsavelInvestigacao": "Amy Santiago",
+      "faixa": "99º",
+      "artigo": "33",
+      "local": "Brooklyn - SP",
+      "data": "2023-01-01",
+      "hora": "09:00",
+      "flagrante": "S",
+      "nomeVitima": "NT",
+      "cpfrgVitima": "NT",
+      "nomeTestemunha": "Fulana de tal",
+      "cpfrgTestemunha": "3333333",
+      "nomeAutor": "Fulana de tal",
+      "cpfrgAutor": "666666",
+      "id": 8
+    },
+    {
+      "dataDoRegistro": "2023-04-15",
+      "horaDoRegistro": "22:00",
+      "responsavelInvestigacao": "Jacob Peralta",
+      "faixa": "99º",
+      "artigo": "157",
+      "local": "Brooklyn - SP",
+      "data": "2023-04-05",
+      "hora": "21:40",
+      "flagrante": "S",
+      "nomeVitima": "Ciclano de tal",
+      "cpfrgVitima": "11111111111",
+      "nomeTestemunha": "Em aberto",
+      "cpfrgTestemunha": "Em aberto",
+      "nomeAutor": "Em aberto",
+      "cpfrgAutor": "22222",
+      "id": 9
+    }
+  ]
+}

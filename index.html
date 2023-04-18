@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header id="header">
+        <img id="logo" src="imagens/logo.png">
+        <h3>GUIA DE PÁGINAS</h3>
+        <nav id="nav">
+          <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a class="header-item" href="buscaRegistro.html">Buscar e Atualizar registro</a></li>
+            <li> <a class="header-item" href="delete.html">Deletar conta</a></li>            
+        </ul>
+        </nav>
+
+    </header>
+    <!-- Para não atualizar a página devido solicitação ao servidor de uma requisição solicita. Usando o  event.preventDefault-->
+    <form class="form-cadastro" onsubmit="event.preventDefault()">
+
+
+        <p class="title">Registrar Policial </p>
+        <div class="flex">
+            <label>
+                <input placeholder=""  type="text" id="nomePolicial" class="input-register" required>
+                <span>Nome</span>
+            </label>
+
+            <label>
+                <input placeholder=""  type="text" id="sobrenomePolicial"  class="input-register" required>
+                <span>Sobrenome</span>
+            </label>
+        </div>
+
+        <label>
+            <input placeholder="" id="emailPolicial" type="email" class="input-register">
+            <span>Email</span>
+        </label>
+
+        <label>
+            <input placeholder="" id="cpfPolicial" type="text" class="input-register">
+            <span>CPF</span>
+        </label>
+
+        <label>
+            <input placeholder="" id="senhaPolicial" type="text" class="input-register">
+            <span>Criar senha de login:</span>
+        </label>
+
+        <label>
+            <input placeholder=""  type="text" id="distritoPolicial"  class="input-register" required>
+            <span>Distrito</span>
+        </label>
+
+
+        <input type="button" class="enviarCadastro" onclick="enviarDados()" value="enviar">
+
+        <p class="signin">já tem cadastro?<a href="login.html"> Login</a></p>
+
+    </form>
+
+    
+</body>
+<script src="post.js"></script>
+
+</html>
